@@ -1,0 +1,29 @@
+{% extends 'smartphone/base.html' %}
+
+
+  {% block contents %}
+  <div class="cards">
+  {% for c in contents %}
+  <div class="card">
+    <img class="card-img" src="{{ c.url_img_prevue }}"
+      alt="{{ c.model }}">
+    <div class="card-title">
+      <a class="card-title-text" href="{{ c.get_absolute_url}}">{{c.model}}</a>
+    </div>
+    <div class="card-text">
+      <ul>
+        <li>Производитель: {{c.name}}</li>
+        <li>Платформа: {{ c.os_phone }}</li>
+        <li>Диагональ экрана: {{c.diagonal}}"</li>
+        <li>Тип экрана: {{c.display_type}}"</li>
+        <li>Разрешение: {{c.display_resol}} px</li>
+        <li>Аккумулятор: {{ c.battery }} mah</li>
+      </ul>
+    </div>
+    <a class="card-btn-text" href="{{ c.get_absolute_url }}">подробнее</a>
+  </div>
+  {% endfor %}
+</div>
+  {% endblock %}
+  
+
