@@ -1,6 +1,8 @@
 from django.urls import reverse
 from django.db import models
 
+
+
 class Smartphone(models.Model):
     data_update = models.DateTimeField(auto_now=True, verbose_name='Дата изменения')
     url_product = models.TextField(verbose_name='URL продукта')
@@ -33,16 +35,10 @@ class Smartphone(models.Model):
         verbose_name_plural = 'Смартфоны' # Название таблици в мн. числе
         ordering =  ['data_update'] # Сортировка статей по столбцу
 
-class TV(models.Model):
-    data_update = models.DateTimeField(auto_now=True, verbose_name='Дата изменения')
-    url_product = models.TextField(verbose_name='URL продукта')
-    url_img_prevue = models.TextField(verbose_name='IMG')
-    url_imgs = models.TextField(verbose_name='IMGs')
-    brand = models.CharField(max_length=10, verbose_name='Бренд')
-    model = models.CharField(max_length=25, verbose_name='Модель')
+# class Cat(models.Model):
 
-class Category(models.Model):
-    cat_name = models.CharField(max_length=30)
+
+
 
 
 

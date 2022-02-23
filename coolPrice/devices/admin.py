@@ -1,7 +1,7 @@
 from atexit import register
 from django.contrib import admin
 
-from smartphone.models import *
+from devices.models import *
 
 class SmartphoneAdmin(admin.ModelAdmin):
     list_display = ('id', 'model', 'brand', 'data_update', ) # поля записей

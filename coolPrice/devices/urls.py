@@ -1,8 +1,8 @@
 from django.urls import path
-from smartphone.views import *
+from devices.views import *
 
 urlpatterns = [
-    path('', index_SP, name='index_sp'),
+    path('', index, name='index'),
     path('<int:id>/', specifications, name='spec'),
 ]
 
