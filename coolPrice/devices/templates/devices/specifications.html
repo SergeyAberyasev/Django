@@ -1,6 +1,7 @@
 {% extends 'devices/base.html' %} 
 {% block contents %}
+{{ content.model|linebreaks }}
 <div class="cards">
-	{{ content}}
+	{{ content.model|linebreaks }}
 </div>
 {% endblock %}
