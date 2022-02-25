@@ -12,11 +12,6 @@ def index(request):
 
 def specifications(request, id):
     post = get_object_or_404(Smartphone, pk=id)
-    # print(post) # model: GT Master Edition
-    # id = int(path.split('-')[-1].replace('id', ''))
-    # content = Smartphone.objects.filter(pk = id)
-    # if not content:
-    #     raise Http404()
     content = {
         'content': post,
         'cut_selected': post.id
